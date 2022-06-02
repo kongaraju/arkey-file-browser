@@ -1,0 +1,10 @@
+.folder-list{
+	list-style-type: none;
+}
+.folder-name{
+	font-weight: bold;
+}
+.folder-open{
+	transform: rotate(90deg);
+	display: inline-block;
+}

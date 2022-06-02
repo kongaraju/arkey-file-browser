@@ -1,0 +1,56 @@
+[
+	{
+		"type": "file",
+		"name": "File 1"
+	},
+	{
+		"type": "file",
+		"name": "File 2"
+	},
+	{
+		"type": "file",
+		"name": "File 3"
+	},
+	{
+		"type": "file",
+		"name": "File 4"
+	},
+	{
+		"type": "folder",
+		"name": "FOLDER 1",
+		"children": [
+			{
+				"type": "file",
+				"name": "File 1_1"
+			},
+			{
+				"type": "file",
+				"name": "File 1_2"
+			},
+			{
+				"type": "file",
+				"name": "File 1_3"
+			},
+			{
+				"type": "file",
+				"name": "File 1_4"
+			}
+		]
+	},
+	{
+		"type": "file",
+		"name": "File 5"
+	},
+	{
+		"type": "file",
+		"name": "File 6"
+	},
+	{
+		"type": "file",
+		"name": "File 7"
+	},
+	{
+		"type": "file",
+		"name": "File 8"
+	}
+]
