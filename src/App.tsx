@@ -10,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <ButtonAppBar />
-      <FileBrowser />
+      <div style={{ height: 'calc(100% - 75px)' }}>
+        <FileBrowser />
+      </div>
     </div>
   );
 }
