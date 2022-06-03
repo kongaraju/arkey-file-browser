@@ -1,0 +1,71 @@
+{
+	"id": "-1",
+	"label": "Home",
+	"type": "home",
+	"children": [
+		{
+			"label": "Applications",
+			"id": "1",
+			"type": "folder",
+			"children": [
+				{
+					"label": "Calendar",
+					"id": "2",
+					"type": "file",
+					"children": []
+				},
+				{
+					"label": "Chrome",
+					"id": "3",
+					"type": "file",
+					"children": []
+				},
+				{
+					"label": "Webstorm",
+					"id": "4",
+					"type": "file",
+					"children": []
+				}
+			]
+		},
+		{
+			"label": "Documents",
+			"id": "5",
+			"type": "folder",
+			"children": [
+				{
+					"label": "OSS",
+					"id": "10",
+					"type": "file",
+					"children": []
+				},
+				{
+					"label": "MUI",
+					"id": "6",
+					"type": "folder",
+					"children": [
+						{
+							"label": "Src",
+							"id": "7",
+							"type": "folder",
+							"children": [
+								{
+									"label": "index.js",
+									"id": "8",
+									"type": "file",
+									"children": []
+								},
+								{
+									"label": "tree-view.js",
+									"id": "9",
+									"type": "file",
+									"children": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

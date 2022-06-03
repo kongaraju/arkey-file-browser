@@ -1,0 +1,67 @@
+[
+	{
+		"id": "-1",
+		"label": "Home",
+		"type": "home"
+	},
+	{
+		"label": "Applications",
+		"id": "1",
+		"type": "folder",
+		"parent": "-1"
+	},
+	{
+		"label": "Documents",
+		"id": "5",
+		"type": "folder",
+		"parent": "-1"
+	},
+	{
+		"label": "Calendar",
+		"id": "2",
+		"type": "file",
+		"parent": "1"
+	},
+	{
+		"label": "Chrome",
+		"id": "3",
+		"type": "file",
+		"parent": "1"
+	},
+	{
+		"label": "Webstorm",
+		"id": "4",
+		"type": "file",
+		"parent": "1"
+	},
+	{
+		"label": "OSS",
+		"id": "10",
+		"type": "file",
+		"parent": "5"
+	},
+	{
+		"label": "MUI",
+		"id": "6",
+		"type": "folder",
+		"parent": "5"
+	},
+	{
+		"label": "Src",
+		"id": "7",
+		"type": "folder",
+		"parent": "6"
+	},
+	{
+		"label": "index.js",
+		"id": "8",
+		"type": "file",
+		"parent": "7"
+	},
+	{
+		"label": "tree-view.js",
+		"id": "9",
+		"type": "file",
+		"parent": "7"
+	}
+]

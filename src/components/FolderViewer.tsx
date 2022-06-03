@@ -10,7 +10,7 @@ interface RenderTree {
 export default function FolderViewer(props: {items:RenderTree[]}){
 	const {items} = props;
 	return (<div>
-		{items.map(item => (<div>
+		{items.map(item => (<div key={item.id}>
 			<div>{item.type === 'folder' ? <FolderOutlined /> : <InsertDriveFileOutlined />}</div>
 			<h3>{item.label}</h3>
 		</div>))}
