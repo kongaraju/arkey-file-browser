@@ -11,6 +11,7 @@ interface RenderTree {
 	id: string;
 	label: string;
 	type: string;
+	parent?: string;
 	children?: readonly RenderTree[];
 }
 interface DirsList {
@@ -25,6 +26,7 @@ export default function FileBrowser() {
 		"type": "home",
 	};
 	const [selectedFolder, setSelectedFolder] = useState(null);
+	const [path, setPath] = useState<RenderTree[]>([]);
 	const [selectDirList, setSelectDirList] = useState<RenderTree[]>([]);
 	const [foldersTree, setFoldersTree] = useState(homeNode);
 	const dirsList: DirsList = {};
@@ -49,23 +51,24 @@ export default function FileBrowser() {
 
 	useEffect(() => {
 		updateDirsList(foldersTree);
-	}, [foldersTree]);
+	}, [foldersTree, path]);
 
 	const updateFilesTree = (folderId: string) => {
 		fileBrowserService.getListByFolderId(folderId).then((items) => {
 			dirsList[folderId].children = items;
 			setFoldersTree({ ...foldersTree });
 			setSelectDirList(items);
-		});
+			return fileBrowserService.getPath(folderId);
+		}).then(path => setPath(path));
 	}
 
-	return (<Grid container spacing={2}>
+	return (<Grid container spacing={2} style={{ marginTop: '10px'}}>
 		<Grid item xs={3}>
 			<BarTreeView onSelect={onSelect} data={foldersTree} />
 		</Grid>
 		<Grid item xs={9}>
 			<Stack>
-				<FileBrowserBreadcrumbs />
+				<FileBrowserBreadcrumbs path={path}/>
 				<FolderViewer items={selectDirList} />
 			</Stack>
 		</Grid>
