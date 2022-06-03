@@ -37,4 +37,22 @@ export default class FileBrowserService {
       resolve(data.filter((item) => item.parent === folderId) ?? []);
     });
   }
+  getPath(folderId: string): Promise<RenderTree[]> {
+    return new Promise((resolve, reject) => {
+      const data: RenderTree[] = JSONdata;
+      const currentNode = data.find((item) => item.id === folderId);
+      const path = currentNode ? this.constructPath(currentNode) : [];
+      resolve(path);
+    });
+  }
+  private constructPath(currentNode: RenderTree, path: RenderTree[] = []){
+	const currentPath = path;
+	currentPath.unshift(currentNode);
+	if(currentNode.parent){
+		const data: RenderTree[] = JSONdata;
+		const newNode = data.find((item) => item.id === currentNode.parent);
+		newNode && this.constructPath(newNode, currentPath);
+	}
+	return currentPath;
+  }
 }
