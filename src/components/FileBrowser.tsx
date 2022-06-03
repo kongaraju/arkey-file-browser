@@ -62,13 +62,15 @@ export default function FileBrowser() {
 		}).then(path => setPath(path));
 	}
 
-	return (<Grid container spacing={2} style={{ marginTop: '10px'}}>
-		<Grid item xs={3}>
+	return (<Grid container style={{ height: '100%', marginTop: '10px'}}>
+		<Grid item xs={3} style={{borderRight:'1px solid #CCC'}}>
 			<BarTreeView onSelect={onSelect} data={foldersTree} />
 		</Grid>
 		<Grid item xs={9}>
 			<Stack>
-				<FileBrowserBreadcrumbs path={path}/>
+				<div style={{borderBottom:'1px solid #CCC', paddingBottom: '5px', paddingLeft: '10px'}}>
+					<FileBrowserBreadcrumbs path={path}/>
+				</div>
 				<FolderViewer items={selectDirList} />
 			</Stack>
 		</Grid>

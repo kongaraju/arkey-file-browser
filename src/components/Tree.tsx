@@ -31,12 +31,13 @@ type StyledTreeItemProps = TreeItemProps & {
 };
 
 const StyledTreeItemRoot = styled(TreeItem)(({ theme }) => ({
-	color: theme.palette.text.secondary,
+	color: theme.palette.text.primary,
 	[`& .${treeItemClasses.content}`]: {
 		color: theme.palette.text.secondary,
 		borderTopRightRadius: theme.spacing(2),
 		borderBottomRightRadius: theme.spacing(2),
-		paddingRight: theme.spacing(1),
+		// paddingRight: theme.spacing(1),
+		padding: 0,
 		fontWeight: theme.typography.fontWeightMedium,
 		'&.Mui-expanded': {
 			fontWeight: theme.typography.fontWeightRegular,
@@ -56,7 +57,7 @@ const StyledTreeItemRoot = styled(TreeItem)(({ theme }) => ({
 	[`& .${treeItemClasses.group}`]: {
 		//   marginLeft: 10,
 		[`& .${treeItemClasses.content}`]: {
-			paddingLeft: theme.spacing(2),
+			// paddingLeft: theme.spacing(2),
 		},
 	},
 }));
@@ -122,7 +123,7 @@ export default function BarTreeView(props: BarTreeViewProps) {
 			defaultCollapseIcon={<ExpandMoreIcon />}
 			defaultExpandIcon={<ChevronRightIcon />}
 			onNodeSelect={(ev:any, nodeId: string) => onSelect(nodeId)}
-			sx={{ height: 240, flexGrow: 1, maxWidth: 400, position: 'relative' }}
+			sx={{ height: '100%', flexGrow: 1, width: '100%', position: 'relative' }}
 		>
 			{renderTree(data)}
 		</TreeView>
