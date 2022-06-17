@@ -62,7 +62,7 @@ export default function FileBrowser() {
 		}).then(path => setPath(path));
 	}
 
-	return (<Grid container style={{ height: '100%', marginTop: '10px'}}>
+	return (<Grid container style={{ minHeight: '300px', height: '100%', marginTop: '10px'}}>
 		<Grid item xs={3} style={{borderRight:'1px solid #CCC'}}>
 			<BarTreeView onSelect={onSelect} data={foldersTree} />
 		</Grid>
